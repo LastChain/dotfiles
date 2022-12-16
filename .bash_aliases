@@ -5,6 +5,8 @@
 
 export EDITOR="nvim"
 
+#export BROWSER='/mnt/c/Windows/explorer.exe'
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -29,12 +31,13 @@ alias vbash="$EDITOR ~/.bashrc"
 alias vbash_a="$EDITOR ~/.bash_aliases"
 alias vbash_p="$EDITOR ~/.bash_profile"
 alias vky="$EDITOR ~/.config/kitty/kitty.conf"
-alias vim="$EDITOR"
-alias vi="$EDITOR"
+#alias vim="$EDITOR"
+#alias vi="$EDITOR"
 alias v="$EDITOR"
 alias vimrc="cd ~/.config/nvim/lua/chain/ && clear"
 alias vux="$EDITOR ~/.tmux.conf"
 alias cdc="cd ~/Dropbox/bht/ && clear"
+alias update="sudo apt update && sudo apt upgrade"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

@@ -9,6 +9,7 @@ require "chain.after.nvim-autopairs"
 require "chain.after.tagbar"
 require "chain.after.indentlines"
 require "chain.after.lsp-conf"
+require "chain.after.vim-syntax"
 -- [[ Theme ]]
 --require "chain.after.falcon"
 require "chain.after.tokyonight"

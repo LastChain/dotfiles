@@ -7,7 +7,7 @@
 local set = vim.keymap.set
 local lsp_buf = vim.lsp.buf
 
-require("mason").setup({
+require("mason").setup{
   ui = {
     icons = {
       package_installed = "✓",
@@ -15,7 +15,7 @@ require("mason").setup({
       package_uninstalled = "✗"
     }
   }
-})
+}
 
 require("mason-lspconfig").setup({
   ensure_installed = {
