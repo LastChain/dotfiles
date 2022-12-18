@@ -103,8 +103,6 @@ function current_git_branch() {
 }
 
 export TERMINAL="kitty"
-
-
 force_color_prompt=yes
 _set_my_PS1() {
 #colors
@@ -138,3 +136,7 @@ _set_my_PS1() {
 }
 _set_my_PS1
 unset -f _set_my_PS1
+
+
+
+export GDK_SCALE=2
