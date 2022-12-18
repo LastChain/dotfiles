@@ -87,9 +87,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Cargo init
-. "$HOME/.cargo/env"
-
 # KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 
@@ -102,7 +99,6 @@ function current_git_branch() {
   return ;
 }
 
-export TERMINAL="kitty"
 force_color_prompt=yes
 _set_my_PS1() {
 #colors
@@ -139,4 +135,8 @@ unset -f _set_my_PS1
 
 
 
-export GDK_SCALE=2
+#export TERMINAL="kitty"
+#export GDK_SCALE=2
+
+# Cargo init
+#. "$HOME/.cargo/env"
