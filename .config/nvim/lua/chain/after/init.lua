@@ -10,6 +10,7 @@ require "chain.after.tagbar"
 require "chain.after.indentlines"
 require "chain.after.lsp-conf"
 require "chain.after.vim-syntax"
+require "chain.after.completion"
 -- [[ Theme ]]
 --require "chain.after.falcon"
 require "chain.after.tokyonight"

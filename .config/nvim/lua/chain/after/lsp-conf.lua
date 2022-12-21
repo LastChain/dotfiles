@@ -39,8 +39,14 @@ end
 
 ---
 
+-- init Var for nvim cmp
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+---
+
 require'lspconfig'.rust_analyzer.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     ["rust-analyzer"] = {
       cargo = { allFeatures = true },
@@ -54,6 +60,7 @@ require'lspconfig'.rust_analyzer.setup{
 
 require("lspconfig").marksman.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     filetypes = { "markdown" }
   }
@@ -63,6 +70,7 @@ require("lspconfig").marksman.setup{
 
 require("lspconfig").sumneko_lua.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     Lua = {
       completion = { enable = true, showWord = "Disable" },
@@ -78,6 +86,7 @@ require("lspconfig").sumneko_lua.setup{
 
 require("lspconfig").jsonls.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
         json = {
           filetypes = { "json", "jsonc" },
@@ -91,6 +100,7 @@ require("lspconfig").jsonls.setup{
 --- TODO ltex
 --nvim_lsp.ltex.setup {
 --  on_attach = on_attach,
+--  capabilities = capabilities,
 --  settings = {
 --    ltex = {
 --         additionalRules = {
