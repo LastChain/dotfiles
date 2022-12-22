@@ -61,3 +61,6 @@ map('n', '<c-l>', function()
   end
 end, {silent = true, noremap = true})
 
+-- Reselect visual selection after indenting
+map("v", ">", ">gv", { noremap = true, silent = true })
+map("v", "<", "<gv", { noremap = true, silent = true })
