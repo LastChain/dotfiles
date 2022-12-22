@@ -23,10 +23,11 @@ lsp.configure(
         completion = { enable = true, showWord = "Disable" },
         runtime = { version = "LuaJIT" },
         workspace = { checkThirdParty = false, library = { os.getenv("VIMRUNTIME") } },
-
       }
     }
-  },
+  }
+)
+lsp.configure(
   'rust_analyzer', {
     settings = {
       ["rust-analyzer"] = {
@@ -35,12 +36,16 @@ lsp.configure(
         rustfmt = { extraArgs = { '+nightly' } }
       }
     }
-  },
+  }
+)
+lsp.configure(
   'marksman', {
     settings = {
-      filetypes = { "markdown" }
+      filetypes = { "markdown", "quarto" }
     }
-  },
+  }
+)
+lsp.configure(
   'jsonls', {
     settings = {
       json = {
@@ -48,12 +53,16 @@ lsp.configure(
         --schemas = require('schemastore').json.schemas(),
       },
     },
-  },
+  }
+)
+lsp.configure(
   'YAMLS', {
     settings = {
       -- blank
     }
-  },
+  }
+)
+lsp.configure(
   'ltex', {
     settings = {
       ltex = {

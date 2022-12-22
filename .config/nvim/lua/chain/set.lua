@@ -47,7 +47,7 @@ opt.undofile 	      = true                                  -- bool: Uses the di
 
 opt.breakindent = true
 opt.completeopt = 'menuone,noselect'
-opt.isfname:append("@-@")
+--opt.isfname:append("@-@")
 opt.mouse = 'a'
 
 local g = vim.g
@@ -56,12 +56,14 @@ g.t_co = 256
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
+vim.api.nvim_create_autocmd(
+  'TextYankPost', {
+    callback = function()
+      vim.highlight.on_yank()
+    end,
+    group = highlight_group,
+    pattern = '*',
+  }
+)
 
 
