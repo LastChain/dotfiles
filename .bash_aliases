@@ -38,6 +38,7 @@ alias vimrc="cd ~/.config/nvim/lua/chain/ && clear"
 alias vux="$EDITOR ~/.tmux.conf"
 alias cdc="cd ~/Dropbox/bht/ && clear"
 alias update="sudo apt update && sudo apt upgrade"
+alias fup="flatpak update"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

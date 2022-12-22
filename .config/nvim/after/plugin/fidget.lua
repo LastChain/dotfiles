@@ -1,0 +1,3 @@
+-- [[ Fidget ]]
+
+require('fidget').setup()
