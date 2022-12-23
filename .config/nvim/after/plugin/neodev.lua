@@ -1,0 +1,4 @@
+-- [[ Neodev ]]
+
+require('neodev').setup()
+

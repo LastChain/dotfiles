@@ -7,3 +7,4 @@ g.loaded_netrwPlugin    = 1
 require("nvim-tree").setup()
 
 map('n', '<c-n>', [[:NvimTreeFindFileToggle <CR>]], {silent = true, noremap = true})
+

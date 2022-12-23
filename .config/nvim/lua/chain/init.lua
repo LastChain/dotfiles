@@ -1,6 +1,2 @@
---[[ chain/init.lua ]]
-
-require "chain.plugs"
-require "chain.opts"
-require "chain.vars"
-require "chain.keys"
+require("chain.remap")
+require("chain.set")
