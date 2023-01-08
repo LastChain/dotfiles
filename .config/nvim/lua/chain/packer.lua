@@ -57,14 +57,19 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
 
   -- Quarto plugins...
-  use  'quarto-dev/quarto-nvim'
-  use({
+  use { 'quarto-dev/quarto-nvim',
+    requires = {
+      'neovim/nvim-lspconfig',
+      'jmbuhr/otter.nvim'
+    }
+  }
+  use {
     "quarto-dev/quarto-vim",
     requires = {
       {"vim-pandoc/vim-pandoc-syntax"},
     },
     ft = {"quarto"},
-  })
+  }
 
   -- Nvim FileExplorer-Tree
   use 'nvim-tree/nvim-tree.lua'

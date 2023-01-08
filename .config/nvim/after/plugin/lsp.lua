@@ -5,14 +5,24 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
   'eslint',
-  'sumneko_lua',
-  'rust_analyzer',
-  'marksman',
   'jsonls',
+  'marksman',
+  'r_language_server',
+  'rust_analyzer',
+  'sumneko_lua',
+  'tsserver',
 })
 
+lsp.configure(
+  'r_language_server', {
+    settings = {
+      -- cmd = { "R", "--slave", "-e", "languageserver::run()" },
+      -- filetypes = { "r", "rmd", "qmd" },
+      -- log_level = { 2 },
+    }
+  }
+)
 -- Fix Undefined global 'vim'
 lsp.configure(
   'sumneko_lua', {
@@ -41,7 +51,7 @@ lsp.configure(
 lsp.configure(
   'marksman', {
     settings = {
-      filetypes = { "markdown", "quarto" }
+      filetypes = { "markdown" }
     }
   }
 )
@@ -64,12 +74,21 @@ lsp.configure(
 )
 lsp.configure(
   'ltex', {
+    autostart = false,
     settings = {
       ltex = {
+        enabled = { "latex", "tex", "bib", "markdown" },
+        language = "de-DE",
+        diagnosticSeverity = "information",
+        setenceCacheSize = 2000,
         additionalRules = {
-          -- languageModel = '~/ngrams/',installed
+          enablePickyRules = true,
+          motherTongue = "de-DE",
         },
-      }
+        trace = { server = "verbose" },
+        dictionary = {},
+        disabledRules = {},
+        hiddenFalsePositives = {},}
     }
   }
 )

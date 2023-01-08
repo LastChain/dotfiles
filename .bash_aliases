@@ -26,19 +26,24 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias vbashrc="source ~/.bashrc; echo '~/.bashrc reloaded ..'"
-alias vbash="$EDITOR ~/.bashrc"
-alias vbash_a="$EDITOR ~/.bash_aliases"
-alias vbash_p="$EDITOR ~/.bash_profile"
 alias vky="$EDITOR ~/.config/kitty/kitty.conf"
 #alias vim="$EDITOR"
 #alias vi="$EDITOR"
 alias v="$EDITOR"
-alias vimrc="cd ~/.config/nvim/lua/chain/ && clear"
 alias vux="$EDITOR ~/.tmux.conf"
+
+alias vbashrc="source ~/.bashrc; echo '~/.bashrc reloaded ..'"
+alias vbash="$EDITOR ~/.bashrc"
+alias vbash_a="$EDITOR ~/.bash_aliases"
+alias vbash_p="$EDITOR ~/.bash_profile"
+
+alias vimrc="cd ~/.config/nvim/lua/chain/ && clear"
+alias vimrc_="cd ~/.config/nvim/after/plugin/ && clear"
+
+alias upd="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update"
+# alias upd_="flatpak update"
+
 alias cdc="cd ~/Dropbox/bht/ && clear"
-alias update="sudo apt update && sudo apt upgrade"
-alias fup="flatpak update"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
